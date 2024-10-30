@@ -38,9 +38,21 @@ public class Recursividad {
 
     public int sumaDigitos(int numero){
         if (numero<10) {
+            System.out.println("Caso base alcanzado"+numero);
             return numero;
         }
         int num = numero%10 + sumaDigitos(numero/10);
+        System.out.println("Resultadp parcial para "+n+" * factorial("+(n-1)+") = "+resultado);
         return num;  
+    }
+
+    //Fibonacci 
+    public int fibonacci(int n){
+        //Caso base
+        if (n==0)return 0;
+        if (n==1)return 1;
+        
+        return fibonacci(n-1)+fibonacci(n-2);
+                            
     }
 }
